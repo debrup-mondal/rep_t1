@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Title of the app
-st.title('Streamlit Selectbox Example')
+st.title('Cloud 9')
 
 # Description
 st.write('This is an example of a Streamlit app with a selectbox.')
