@@ -1,17 +1,11 @@
-import streamlit as st, os
-from firebase_config_3 import (
+import streamlit as st
+from firebase_config import (
     initialize_firebase,
     get_firestore_client,
     get_collection_path,
 )
 from auth import authenticate, get_all_document_ids
 from styles import hide_menu_style
-from dotenv import load_dotenv
-
-
-# Load environment variables from .env file
-load_dotenv()
-
 
 # Apply the CSS to hide the Streamlit menu and footer
 st.markdown(hide_menu_style, unsafe_allow_html=True)
