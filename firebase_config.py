@@ -1,7 +1,5 @@
-import firebase_admin
+import streamlit as st, firebase_admin, json
 from firebase_admin import credentials, firestore
-import json
-import streamlit as st
 
 COLLECTION_PATH = "testCollection"
 
@@ -19,11 +17,3 @@ def initialize_firebase():
 
 def get_firestore_client():
     return firestore.client()
-
-
-# Usage Example
-if __name__ == "__main__":
-    initialize_firebase()
-    db = get_firestore_client()
-    collection_path = get_collection_path()
-    # Now you can use 'db' to interact with Firestore, e.g., db.collection(collection_path).get()

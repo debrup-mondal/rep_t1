@@ -10,18 +10,14 @@ from styles import hide_menu_style
 # Apply the CSS to hide the Streamlit menu and footer
 st.markdown(hide_menu_style, unsafe_allow_html=True)
 
-
 # Initialize Firebase
 initialize_firebase()
-
 
 # Get a reference to the Firestore client
 db = get_firestore_client()
 
-
 # Access the collection path from environment variables
 collection_path = get_collection_path()
-
 
 # Fetch the list of all document IDs in the collection
 document_list = get_all_document_ids(db, collection_path)

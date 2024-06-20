@@ -1,5 +1,4 @@
-import hashlib
-import streamlit as st
+import streamlit as st, hashlib
 
 
 # Function to fetch all document IDs in the specified Firestore collection
