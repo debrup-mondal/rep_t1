@@ -36,7 +36,8 @@ def main():
     # If user is authenticated, show welcome message and title
     if st.session_state.authenticated:
         st.success(f"Welcome {st.session_state.username}")
-        st.title("Enter Data Carefully")
+        st.info("Enter Data Carefully")
+
     else:
         # If not authenticated, show the login interface
         st.title("Cloud 9 - User Authentication")
