@@ -36,7 +36,8 @@ def main():
 
     else:
         # If not authenticated, show the login interface
-        st.title("Cloud 9 - User Authentication")
+        st.title(":blue[Cloud 9]")
+        st.subheader("User Authentication", divider="rainbow")
 
         # Create a dropdown select box to choose a username from document list
         username = st.selectbox("Select User", document_list)
@@ -44,7 +45,7 @@ def main():
         password = st.text_input("Password", type="password")
 
         # Create a login button
-        if st.button("Login"):
+        if st.button("Login", type="primary"):
             # Authenticate the user when the login button is clicked
             if authenticate(db, collection_path, username, password):
                 st.session_state.authenticated = True
